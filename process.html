@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Code | Coding Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+</head>
+<body class="dark-mode">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="home.html" class="logo">
+                <img src="assets/images/logo.png" alt="Coding Garden Logo" class="logo-image">
+                <span class="logo-text">Coding <span>Garden</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="process.html" class="active">Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section with Stats -->
+        <section class="process-hero">
+            <div class="container">
+                <h1 class="section-title">Behind the Code</h1>
+                <p class="subtitle">The journey from blank canvas to interactive masterpiece</p>
+                
+                <!-- STATS SECTION - Added Here -->
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">300+</span>
+                        <span class="stat-label">Lines of JS</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">47</span>
+                        <span class="stat-label">Coffees ☕</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Epic Portfolio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Director's Cut - Your Face Video -->
+<section class="directors-cut">
+    <div class="container">
+        <h2 class="section-title">The Director's Cut</h2>
+        <p class="section-subtitle">Personal introduction and walkthrough</p>
+        
+        <div class="video-container">
+            <div class="video-player">
+                <video controls>
+                    <source src="assets/process/intro-video.mp4" type="video/mp4">
+                    Your browser doesn't support video.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>Building My Portfolio</h3>
+                <p>A personal walkthrough of my development process, challenges faced, and solutions found.</p>
+            </div>
+            <div class="video-tip">
+                <i class="fas fa-info-circle"></i>
+                <span>Tip: Use the fullscreen button for best viewing experience</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timelapse Section -->
+<section class="timelapse-section">
+    <div class="container">
+        <h2 class="section-title">Coding Timelapse</h2>
+        <p class="section-subtitle">Watch the website come to life</p>
+        
+        <div class="timelapse-container">
+            <div class="video-player">
+                <video controls>
+                    <source src="assets/process/timelapse.mp4" type="video/mp4">
+                    Your browser doesn't support video.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>From Blank Page to Live Site</h3>
+                <p>This timelapse shows the complete development process, including:</p>
+                <ul>
+                    <li>HTML structure creation</li>
+                    <li>CSS styling and animations</li>
+                    <li>JavaScript functionality</li>
+                    <li>Debugging and testing</li>
+                </ul>
+            </div>
+            <div class="video-tip">
+                <i class="fas fa-info-circle"></i>
+                <span>Recorded in portrait mode - fullscreen recommended</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Screenshot Gallery -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Development Screenshots</h2>
+                <p class="section-subtitle">Behind-the-scenes look at the process</p>
+                
+                <div class="gallery-grid">
+                    <!-- 10 Screenshot boxes -->
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot1.jpg" alt="Development Screenshot 1" loading="lazy">
+                        <div class="gallery-caption">Planning & Wireframes</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot2.jpg" alt="Development Screenshot 2" loading="lazy">
+                        <div class="gallery-caption">HTML Structure</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot3.jpg" alt="Development Screenshot 3" loading="lazy">
+                        <div class="gallery-caption">CSS Styling</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot4.jpg" alt="Development Screenshot 4" loading="lazy">
+                        <div class="gallery-caption">JavaScript Code</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot5.jpg" alt="Development Screenshot 5" loading="lazy">
+                        <div class="gallery-caption">Theme Development</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot6.jpg" alt="Development Screenshot 6" loading="lazy">
+                        <div class="gallery-caption">Responsive Testing</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot7.jpg" alt="Development Screenshot 7" loading="lazy">
+                        <div class="gallery-caption">GitHub Setup</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot8.jpg" alt="Development Screenshot 8" loading="lazy">
+                        <div class="gallery-caption">Debugging</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot9.jpg" alt="Development Screenshot 9" loading="lazy">
+                        <div class="gallery-caption">Performance Testing</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="assets/process/screenshot10.jpg" alt="Development Screenshot 10" loading="lazy">
+                        <div class="gallery-caption">Final Result</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-note">
+                    <p><i class="fas fa-info-circle"></i> These screenshots show the step-by-step development process from initial planning to final deployment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="tech-section">
+            <div class="container">
+                <h2 class="section-title">Technologies Used</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML5</h3>
+                        <p>Semantic structure</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS3</h3>
+                        <p>Styling & animations</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Interactivity</p>
+                    </div>
+                    
+                    <div class="tech-item">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub Pages</h3>
+                        <p>Hosting & deployment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Abharajith Indrapala. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/w_abha.i/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/abharajith-indrapala-067134396" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/94743473621" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Elements -->
+    <div class="gradient-bg"></div>
+
+    <script src="script.js"></script>
+    
+    <!-- Simple Gallery Lightbox -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simple lightbox for gallery images
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            
+            galleryItems.forEach(img => {
+                img.addEventListener('click', function() {
+                    const lightbox = document.createElement('div');
+                    lightbox.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0,0,0,0.9);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 1000;
+                        cursor: pointer;
+                    `;
+                    
+                    const fullImg = document.createElement('img');
+                    fullImg.src = this.src;
+                    fullImg.alt = this.alt;
+                    fullImg.style.cssText = `
+                        max-width: 90%;
+                        max-height: 90%;
+                        object-fit: contain;
+                    `;
+                    
+                    lightbox.appendChild(fullImg);
+                    document.body.appendChild(lightbox);
+                    
+                    lightbox.addEventListener('click', function() {
+                        document.body.removeChild(lightbox);
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        // ===== PORTRAIT VIDEO DETECTION & FIX =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for page to load
+            setTimeout(function() {
+                fixPortraitVideos();
+            }, 1000);
+            
+            // Also fix when videos are loaded
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                video.addEventListener('loadeddata', fixPortraitVideos);
+                video.addEventListener('canplay', fixPortraitVideos);
+            });
+        });
+        
+        function fixPortraitVideos() {
+            const videoPlayers = document.querySelectorAll('.video-player');
+            
+            videoPlayers.forEach(player => {
+                const video = player.querySelector('video');
+                if (!video) return;
+                
+                // Check if video is loaded and has dimensions
+                if (video.videoWidth > 0 && video.videoHeight > 0) {
+                    const isPortrait = video.videoHeight > video.videoWidth;
+                    
+                    if (isPortrait) {
+                        // Add portrait class
+                        player.classList.add('portrait-video');
+                        
+                        // Add portrait notice if not already there
+                        if (!player.querySelector('.portrait-notice')) {
+                            const notice = document.createElement('div');
+                            notice.className = 'portrait-notice';
+                            notice.innerHTML = '<i class="fas fa-mobile-alt"></i> Portrait Video';
+                            player.appendChild(notice);
+                        }
+                        
+                        // Add fullscreen button if not already there
+                        if (!player.querySelector('.fullscreen-btn')) {
+                            const fullscreenBtn = document.createElement('button');
+                            fullscreenBtn.className = 'fullscreen-btn';
+                            fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                            fullscreenBtn.title = 'Toggle Fullscreen';
+                            fullscreenBtn.onclick = function() {
+                                if (video.requestFullscreen) {
+                                    video.requestFullscreen();
+                                } else if (video.webkitRequestFullscreen) {
+                                    video.webkitRequestFullscreen();
+                                } else if (video.msRequestFullscreen) {
+                                    video.msRequestFullscreen();
+                                }
+                            };
+                            player.appendChild(fullscreenBtn);
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Also run when window resizes
+        window.addEventListener('resize', fixPortraitVideos);
+    </script>
+</body>
+</html>

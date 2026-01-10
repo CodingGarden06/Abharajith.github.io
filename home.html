@@ -29,6 +29,7 @@
             <ul class="nav-links">
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="process.html">Process</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -68,51 +69,78 @@
             </div>
         </section>
 
-        <!-- Video Showcase -->
-        <section class="video-section" id="showcase">
-            <div class="container">
-                <h2 class="section-title color-cycle">Coding <span class="highlight">Journey</span></h2>
-                <p class="section-subtitle"></p>
-                
-                <div class="video-grid">
-                    <!-- VIDEO 1 -->
-                    <div class="video-card">
-                        <div class="video-thumbnail">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <div class="placeholder-video">
-                                <i class="fas fa-video"></i>
-                                <p>Video 1</p>
-                                <small>assets/videos/video1.mp4</small>
-                            </div>
+<!-- Video Showcase Section -->
+<section class="video-section" id="showcase">
+    <div class="container">
+        <h2 class="section-title color-cycle">Coding <span class="highlight">Journey</span></h2>
+        <p class="section-subtitle">See my development process in action</p>
+        
+        <div class="video-grid">
+            <!-- CARD 1: Introduction Video -->
+            <a href="process.html" class="video-card-link">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
                         </div>
-                        <div class="video-info">
-                            <h3>From Concept to Code</h3>
-                            <p>Watch me transform a design mockup into a fully functional website.</p>
+                        <!-- REPLACE PINK CARD WITH THUMBNAIL -->
+                        <img src="assets/process/thumbnails/intro-thumbnail.jpg" 
+                             alt="Introduction Video Thumbnail"
+                             class="video-thumbnail-img"
+                             onerror="this.style.display='none'; this.parentElement.querySelector('.thumbnail-fallback').style.display='flex';">
+                        <!-- Fallback if image doesn't load -->
+                        <div class="thumbnail-fallback">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Meet the Developer</p>
                         </div>
                     </div>
-
-                    <!-- VIDEO 2 -->
-                    <div class="video-card">
-                        <div class="video-thumbnail">
-                            <div class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </div>
-                            <div class="placeholder-video">
-                                <i class="fas fa-video"></i>
-                                <p>Video 2</p>
-                                <small>assets/videos/video2.mp4</small>
-                            </div>
-                        </div>
-                        <div class="video-info">
-                            <h3>Interactive Magic</h3>
-                            <p>Creating engaging user experiences with JavaScript animations.</p>
+                    <div class="video-info">
+                        <h3>Behind the Scenes</h3>
+                        <p>Watch my personal introduction and development walkthrough.</p>
+                        <div class="video-link-text">
+                            <span>View Introduction Video →</span>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </a>
+
+            <!-- CARD 2: Timelapse Video -->
+            <a href="process.html" class="video-card-link">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <!-- REPLACE PINK CARD WITH THUMBNAIL -->
+                        <img src="assets/process/thumbnails/timelapse-thumbnail.jpg" 
+                             alt="Coding Timelapse Thumbnail"
+                             class="video-thumbnail-img"
+                             onerror="this.style.display='none'; this.parentElement.querySelector('.thumbnail-fallback').style.display='flex';">
+                        <!-- Fallback if image doesn't load -->
+                        <div class="thumbnail-fallback">
+                            <i class="fas fa-code"></i>
+                            <p>Coding Timelapse</p>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Development Process</h3>
+                        <p>Watch the complete website build from start to finish.</p>
+                        <div class="video-link-text">
+                            <span>View Coding Timelapse →</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Direct button to process page -->
+        <div class="text-center" style="margin-top: 40px;">
+            <a href="process.html" class="btn primary">
+                <i class="fas fa-film"></i> View Full Development Process
+            </a>
+        </div>
+    </div>
+</section>
 
         <!-- Project Showcase -->
         <section class="projects">
