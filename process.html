@@ -283,12 +283,12 @@
     <script>
         // ===== PORTRAIT VIDEO DETECTION & FIX =====
         document.addEventListener('DOMContentLoaded', function() {
-            // Wait a bit for page to load
+            
             setTimeout(function() {
                 fixPortraitVideos();
             }, 1000);
             
-            // Also fix when videos are loaded
+            
             const videos = document.querySelectorAll('video');
             videos.forEach(video => {
                 video.addEventListener('loadeddata', fixPortraitVideos);
@@ -303,7 +303,7 @@
                 const video = player.querySelector('video');
                 if (!video) return;
                 
-                // Check if video is loaded and has dimensions
+                
                 if (video.videoWidth > 0 && video.videoHeight > 0) {
                     const isPortrait = video.videoHeight > video.videoWidth;
                     
@@ -311,7 +311,7 @@
                         // Add portrait class
                         player.classList.add('portrait-video');
                         
-                        // Add portrait notice if not already there
+                        
                         if (!player.querySelector('.portrait-notice')) {
                             const notice = document.createElement('div');
                             notice.className = 'portrait-notice';
@@ -319,7 +319,7 @@
                             player.appendChild(notice);
                         }
                         
-                        // Add fullscreen button if not already there
+                        
                         if (!player.querySelector('.fullscreen-btn')) {
                             const fullscreenBtn = document.createElement('button');
                             fullscreenBtn.className = 'fullscreen-btn';

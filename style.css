@@ -2054,14 +2054,13 @@ video {
     gap: 10px;
 }
 
-/* Update existing video card styles if needed */
+
 .video-card {
-    cursor: pointer; /* Makes it clear it's clickable */
+    cursor: pointer; 
 }
 
-/* If you want the whole card to be clickable, remove pointer-events from inner elements */
 .video-card * {
-    pointer-events: none; /* Makes the entire card clickable, not individual elements */
+    pointer-events: none; 
 }
 
 /* ===== VIDEO THUMBNAIL STYLES ===== */
@@ -2071,7 +2070,7 @@ video {
     height: 200px;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
-    background: linear-gradient(45deg, var(--color1), var(--color2)); /* Fallback gradient */
+    background: linear-gradient(45deg, var(--color1), var(--color2)); 
 }
 
 .video-thumbnail-img {
@@ -2129,7 +2128,7 @@ video {
     opacity: 1;
 }
 
-/* Fallback if thumbnail doesn't load */
+
 .thumbnail-fallback {
     position: absolute;
     top: 0;
@@ -2159,7 +2158,7 @@ video {
     margin: 0;
 }
 
-/* Hide fallback by default */
+
 .thumbnail-fallback {
     display: none;
 }

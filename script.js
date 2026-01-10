@@ -45,7 +45,7 @@ if (hamburger && navLinks) {
         hamburger.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking outside
+   
     document.addEventListener('click', (e) => {
         if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('active');
@@ -414,17 +414,17 @@ document.addEventListener('DOMContentLoaded', function() {
         rickrollBtn.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Streamable embed URL (your video)
+           
             const streamableUrl = "https://streamable.com/e/lf027o?autoplay=1&muted=0&controls=0";
             
-            // Set iframe source with autoplay
+          
             rickrollVideo.src = streamableUrl;
             
-            // Show fullscreen modal
+          
             rickrollModal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden'; 
             
-            // Try to request fullscreen (works on some browsers)
+           
             if (rickrollVideo.requestFullscreen) {
                 rickrollVideo.requestFullscreen();
             } else if (rickrollVideo.webkitRequestFullscreen) {
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close when clicking outside (but careful with fullscreen)
+    
     rickrollModal.addEventListener('click', function(e) {
         if (e.target === this) {
             closeRickroll();
