@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Neural Garden</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
+    <style>
+        /* Page transition styles */
+        body {
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        body.page-transition {
+            opacity: 0;
+        }
+        
+        /* Simplified background for contact page */
+        .gradient-bg {
+            opacity: 0.05;
+            filter: blur(150px);
+        }
+        .blob-container {
+            display: none;
+        }
+        .particle-rain {
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <i class="fas fa-sun" id="theme-icon"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="Neural Garden Logo" class="logo-image">
+            <span class="logo-text">Coding <span>Garden</span></span>
+        </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <main class="main-content">
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="section-title color-cycle">Let's <span class="highlight">Connect</span></h1>
+                <p class="section-subtitle">Got a project in mind? Let's make it happen!</p>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>Send Me a Message</h2>
+                        <p class="form-subtitle">I typically respond within 24 hours</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i> Your Name
+                                    </label>
+                                    <input type="text" id="name" placeholder="Enter your name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i> Email Address
+                                    </label>
+                                    <input type="email" id="email" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">
+                                    <i class="fas fa-tag"></i> Subject
+                                </label>
+                                <input type="text" id="subject" placeholder="Project inquiry, collaboration, etc." required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">
+                                    <i class="fas fa-comment-alt"></i> Your Message
+                                    </label>
+                                <textarea id="message" rows="6" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn primary submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            
+                            <div id="form-message"></div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info-section">
+                        <h2>Get In Touch</h2>
+                        
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Email</h3>
+                                    <p>abharajith06@gmail.com</p>
+                                    <a href="mailto:abharajith06@gmail.com" class="info-link">Send Email</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Phone</h3>
+                                    <p>+94 74 347 3621</p>
+                                    <a href="tel:+94743473621" class="info-link">Call Now</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Location</h3>
+                                    <p>Edith Cowan University</p>
+                                    <p>Colombo, Sri Lanka</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Availability</h3>
+                                    <p>Monday - Friday</p>
+                                    <p>9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="contact-social">
+                            <h3>Follow My Journey</h3>
+                            <div class="social-grid">
+                                <a href="https://wa.me/94743473621" target="_blank" class="social-card">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>Whatsapp</span>
+                                    <small>Send me a text</small>
+                                </a>
+                                
+                                <a href="https://www.instagram.com/w_abha.i/" target="_blank" class="social-card">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                    <small>Professional profile</small>
+                                </a>
+                                
+                                <a href="https://linkedin.com/in/abharajith-indrapala-067134396" target="_blank" class="social-card">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>Linkedin</span>
+                                    <small>Business Profile</small>
+                                </a>
+                                
+                                <a href="#" class="social-card">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                    <small>Tutorials</small>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- FAQ -->
+                        <div class="faq-section">
+                            <h3>Frequently Asked</h3>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What's your typical response time?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>I usually respond within 24 hours on weekdays. For urgent matters, please mention "URGENT" in your subject line.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Do you take on freelance projects?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes! I'm available for freelance web design and development projects. Let's discuss your requirements.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What information should I include in my message?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Please include: project description, timeline, budget range, and any design references you have.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Abharajith Indrapala. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/w_abha.i/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/abharajith-indrapala-067134396" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/94743473621" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simplified Background -->
+    <div class="gradient-bg"></div>
+    <div class="particle-rain"></div>
+
+    <!-- Embedded JavaScript for Contact Page -->
+    <script>
+        // ===== CONTACT PAGE JAVASCRIPT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // ===== THEME TOGGLE =====
+            if (themeToggle && themeIcon) {
+                // Check saved theme
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                    document.body.classList.add('light-mode');
+                    document.body.classList.remove('dark-mode');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                } else {
+                    document.body.classList.add('dark-mode');
+                    document.body.classList.remove('light-mode');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                }
+                
+                // Toggle theme
+                themeToggle.addEventListener('click', () => {
+                    const isLightMode = document.body.classList.contains('light-mode');
+                    
+                    if (isLightMode) {
+                        document.body.classList.remove('light-mode');
+                        document.body.classList.add('dark-mode');
+                        themeIcon.classList.remove('fa-moon');
+                        themeIcon.classList.add('fa-sun');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        document.body.classList.add('light-mode');
+                        themeIcon.classList.remove('fa-sun');
+                        themeIcon.classList.add('fa-moon');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // ===== MOBILE NAVIGATION =====
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            }
+            
+            // ===== SMOOTH PAGE TRANSITIONS =====
+            // Fade in on page load
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.3s ease-in-out';
+                document.body.style.opacity = '1';
+            }, 10);
+            
+            // Smooth navigation between pages
+            const pageLinks = document.querySelectorAll('a[href^="index.html"], a[href^="about.html"]');
+            
+            pageLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.href && !this.target && !this.download) {
+                        e.preventDefault();
+                        document.body.classList.add('page-transition');
+                        
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 300);
+                    }
+                });
+            });
+            
+            // ===== CONTACT FORM =====
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('form-message');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value.trim();
+                    const message = document.getElementById('message').value.trim();
+                    
+                    // Validation
+                    if (!name || !email || !subject || !message) {
+                        showMessage('Please fill in all fields.', 'error');
+                        return;
+                    }
+                    
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        showMessage('Please enter a valid email address.', 'error');
+                        return;
+                    }
+                    
+                    // Simulate successful submission
+                    showMessage('🎉 Message sent successfully! I\'ll get back to you soon.', 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to message
+                    setTimeout(() => {
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+                });
+            }
+            
+            function showMessage(text, type) {
+                if (!formMessage) return;
+                
+                formMessage.textContent = text;
+                formMessage.className = type;
+                formMessage.style.display = 'block';
+                
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
+            
+            // ===== FAQ TOGGLE =====
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle answer
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        answer.style.display = 'block';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+            
+            // ===== COLOR CYCLING =====
+            const colorElements = document.querySelectorAll('.color-cycle');
+            if (colorElements.length > 0) {
+                const colors = ['#FF6B8B', '#4ECDC4', '#FFD166', '#06D6A0', '#118AB2', '#9D4EDD'];
+                
+                setInterval(() => {
+                    colorElements.forEach(el => {
+                        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                        el.style.color = randomColor;
+                    });
+                }, 2000);
+            }
+            
+            console.log('Contact page loaded successfully!');
+        });
+    </script>
+</body>
+</html>

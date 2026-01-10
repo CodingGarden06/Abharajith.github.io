@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comic Books</title>
+        <style>
+            
+            p{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: white;
+                font-weight: 200;
+                font-style: oblique;
+                font-variant: small-caps;
+            }
+            
+            *{
+                box-sizing:border-box;
+            }
+            .column{
+                float:left;
+                width:20%;
+                padding:2px;
+                align-items: center;
+            }
+            .row::after{
+                clear:both;
+                display:table;
+                content:"";
+            }
+           h1,h2,h3,h4,h5{
+                color:white
+
+           }
+            
+            
+            #demo{
+                border-radius: 60px;
+                box-shadow: 10px 10px 50px red;
+                transition: all ease-in-out;
+                width:100%;
+                height:500px;
+    
+            }
+            #demo:hover{
+                border-radius: 60px;
+                box-shadow: 10px 10px 50px blue;
+                width:100%;
+                height:500px;
+               
+            }
+            
+            #meme{
+                border: 0px solid black;
+                border-radius: 20px;
+                box-shadow: 10px 10px 10px black;
+                width:150px;
+                height:230px;
+          
+             
+            }
+            #meme:hover{
+                border: 0px solid black;
+                border-radius: 20px;
+                box-shadow: 10px 10px 10px whitesmoke;
+                width:153px;
+                height:233px;
+                transform: scale(1.1);
+              ;
+            }
+            .row{
+                background-color: black;
+                border-radius: 50px;
+                height:160px;
+                
+
+            }
+            #Hello{
+                border-radius: 50%;
+            }
+            #Hello:hover{
+                border-radius:50%;
+                transition: color 0.3s;
+            }
+               
+            }
+            .Dilana{
+                border:4px solid grey;
+                border-radius: 50px;
+                background-color: black;
+                width:50%
+            }
+            #marvel_insider{
+                border-radius: 20%;
+            }
+            #marvel_insider:hover{
+                border-radius: 20%;
+                box-shadow: 10px 10px 20px  red;
+                height:120px;
+                width:220px;
+                
+            }
+            #h1style{
+                font-family:Agency FB; 
+                font-size: 700%; 
+                text-shadow:2px 2px 4px red;
+                color:white;
+            }
+            #h1style:hover{
+                font-family:Agency FB; 
+                font-size: 700%; 
+                text-shadow:5px 2px 4px whitesmoke;
+                color:red;
+            }
+            #September20:hover{
+                text-shadow: 5px 2px 4px red;
+            }
+            #Bestselling:hover{
+                text-shadow: 5px 2px 4px darkgreen;
+            }
+            #Sep27:hover{
+                text-shadow: 5px 2px 4px yellow;
+            }
+            #latestcomics:hover{
+                text-shadow: 5px 2px 4px red;
+            }
+            #featuredcomics:hover{
+                text-shadow: 5px 2px 4px grey;
+            } 
+            #marvelfan{
+                color:white;
+                font-family: Agency FB;
+            }  
+            #marvelfan:hover{
+                color:red;
+                font-family: Agency FB;
+            }            
+           
+            
+        </style>
+        
+    </head>
+    <body background="C:\Users\HP\Pictures\blue.webp" style="background-repeat:repeat; background-size:100%;">
+
+                                                               
+                                                                <!--Marvel top image-->
+
+        <table style="padding-top:0%; width:100%;">
+            <tr>
+                <td width="500%"><center><a href="https://www.marvel.com/"><img src="marvelm.png" width="200" height="80" ></a></center></td>
+               
+            </tr>
+
+                                                                <!--Marvel Main image-->
+
+            <tr>
+                <td width="500%"><center><img src="ironmanmain.png" width="100%" height="1000" id="demo"></center></td>
+            </tr>
+            <tr>
+
+                                                                <!--Marvel Main Heading-->
+
+                <td><center><h1 id="h1style">WELCOME TO MARVEL COMICS</h1></center></td>
+            </tr>
+            <tr>
+
+                                                                <!--Marvel comics set 1-->
+
+                <td><h3 style="font-family:Arial,sans-serif; font-size: 250%;font-family: Agency FB; color:orange;" id="September20">SEPTEMBER 20:NEW RELEASES</h3></td>
+            </tr>   
+                
+            
+
+        </table>
+        <table width="100%">
+            <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/111697/rom_facsimile_edition_2023_1"><img src="Rom.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Rom: Facsimile Edition #1</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/110358/captain_america_2023_1"><img src="america.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Captain America #1</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/110311/x-men_annual_chaos_2023_1"><img src="xman.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">X-Men Annual [CHAOS] #1</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/110307/predator_vs_wolverine_2023_1"><img src="wolverine.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Predator Vs. Wolverine</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109976/strange_academy_moon_knight_2023_1"><img src="strange.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Strange Academy:MoonKnight</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/108032/what_if._dark_carnage_2023_1"><img src="darkcarnage.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">What If...? Dark: Carnage #1</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/107152/dark_x-men_2023_2"><img src="darkxman.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Dark X-Men #2</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/107620/uncanny_avengers_2023_2"><img src="uncanny.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Uncanny Avengers #2</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/106469/death_of_the_venomverse_2023_4"><img src="venomverse.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Death of the Venomver.. #4</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/106797/star_wars_dark_droids_-_d-squad_2023_1"><img src="darksquad.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Star Wars: Dark Droids - D-Squa...</p>
+                    </center></td>
+              </tr>
+
+
+        </table>
+     
+                                                            <!--Marvel comics set 2-->
+
+        <table>
+            <tr>
+                <td><h3 style="font-size: 250%;font-family: Agency FB; color:aqua;" id="Bestselling" >BEST SELLING DIGITAL COMICS</h3></td>
+            </tr>
+        </table> 
+        <table width="100%" >
+            <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/47001/age_of_ultron_2013_1"><img src="ultron.png" width="200" height="300" id="meme"></a></center><br><center><p>Age of Ultron #1</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/41552/deadpool_kills_the_marvel_universe_2011_2"><img src="deadpool.png" width="200" height="300" id="meme"></a></center><br><center><p style="font-size:100%;" id="Text">Deadpool Kills the...</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/24822/amazing_spider-man_presents_anti-venom_-_new_ways_to_live_2009_2"><img src="antivenom.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Amazing Spider-Man...</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/collection/15894/irredeemable_ant-man_vol_1_low-life_digest_trade_paperback"><img src="antman.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Irredeemable Ant Man,Vol...</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/collection/41915/wolverine_old_man_logan_trade_paperback"><img src="oldmanlogan.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Wolverine: Old Man Logan</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/102514/captain_marvel_2019_50"><img src="captainmarvel.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Captain Marvel #50</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/16868/incredible_hulk_annual_1976_11"><img src="hulk.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Incredible Hulk Annual #11</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/71529/patsy_and_hedy_annual_1963_1"><img src="patsy.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Patsy and Hedy Annual #1</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/107959/amazing_spider-man_facsimile_edition_2023_121"><img src="amazingspiderman.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Amazing Spider-Man...</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/102195/the_amazing_spider-man_2022_27"><img src="thespider.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">The Amazing Spider-Man #27</p>
+                    </center></td>
+              </tr>
+
+
+        </table>
+
+                                                            <!--Marvel comics set 3-->
+
+        <table>
+            <tr>
+                <td><h3 style="font-size: 250%;font-family: Agency FB;color:greenyellow;" id="Sep27" >SEPTEMBER 27 NEW RELEASES</h3></td>
+            </tr>
+        </table> 
+        <table width="100%" >
+            <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/110745/i_am_groot_infinity_comic_2023_4"><img src="uncanny2.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">I Am Groot Infinity Comic #4</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/106106/love_unlimited_infinity_comic_2022_69"><img src="spidermanlove.png" width="200" height="300" id="meme"></a></center><br><center><p style="font-size:100%;" id="Text">Love Unlimited Infinity Comic</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/111674/micronauts_facsimile_edition_2023_1"><img src="micronuts.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Micronauts: Facsimile Edition #1</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/110269/avengers_annual_chaos_2023_1"><img src="chaos.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Avengers Annual [CHAOS] #1</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/110204/ms_marvel_the_new_mutant_2023_2"><img src="msmarvel.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Ms. Marvel: The New Mutant #2</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/109322/loki_the_god_who_fell_to_earth_infinity_comic_2023_10"><img src="loki 10.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Loki: The God Who...10#</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109321/loki_the_god_who_fell_to_earth_infinity_comic_2023_9"><img src="loki 9.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Loki: The God Who...9#</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109320/loki_the_god_who_fell_to_earth_infinity_comic_2023_8"><img src="loki 8.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Loki: The God Who...8#</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109319/loki_the_god_who_fell_to_earth_infinity_comic_2023_7"><img src="loki 7.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Loki: The God Who...7#</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109318/loki_the_god_who_fell_to_earth_infinity_comic_2023_6"><img src="loki 6.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">TLoki: The God Who...6#</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/109317/loki_the_god_who_fell_to_earth_infinity_comic_2023_5"><img src="loki 5.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Loki: The God Who...5#</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/109316/loki_the_god_who_fell_to_earth_infinity_comic_2023_4"><img src="loki 4.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Loki: The God Who...4#</p>
+                    </center></td>                
+              </tr>
+
+
+        </table>
+
+                                                                <!--Marvel comics set 4-->
+
+        <table>
+            <tr>
+                <td><h3 style="font-size: 250%;font-family: Agency FB;color:papayawhip" id="latestcomics">LATEST C0MICS</h3></td>
+            </tr>
+        </table> 
+
+        <table width="100%" >
+            <tr>
+                <td><center><a href="hhttps://www.marvel.com/comics/issue/109001/immortal_thor_2023_2"><img src="immortalthor.png" width="200" height="300" id="meme"></a></center><br><center><p>Immortal Thor#2</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/107283/jean_grey_2023_2"><img src="grey.png" width="200" height="300" id="meme"></a></center><br><center><p style="font-size:100%;">Jean Grey #2</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/93813/marvel_unleashed_2023_2"><img src="unleashed.png" width="200" height="300" id="meme"></a></center><br><center><p>Marvel Unleashed #2</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/97149/ultimate_invasion_2023_4"><img src="inavsion.png" width="200" height="300" id="meme"></a></center><br><center><p>Ultimate Invasion #4</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/107588/storm_2023_5><img src="><img src="storm.png" width="200" height="300" id="meme"></a></center><br><center><p>Storm (2023) #5</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/issue/101517/avengers_2023_5"><img src="avengers2023.png" width="200" height="300" id="meme"></a></center><br><center><p>
+                    Avengers (2023) #5</p>
+                    </center></td>
+                             
+              </tr>
+
+
+        </table>
+
+                                                            <!--Marvel comics set 5-->
+
+        <table>
+            <tr>
+                <td><h3 style="font-size: 250%;font-family: Agency FB; color:crimson" id="featuredcomics">FEATURED SERIES</h3></td>
+            </tr>
+        </table> 
+        <table width="100%" >
+            <tr>
+                <td><center><a href="https://www.marvel.com/comics/series/1058/eternals_2006_-_2007"><img src="eternal.png" width="200" height="300" id="meme"></a></center><br><center><p>Eternals(2006 - 2007)</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/18138/black_widow_2014_-_2015"><img src="blackwidow.png" width="200" height="300" id="meme"></a></center><br><center><p style="font-size:100%;" id="Text">Black Widow(2014 - 2015)</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/issue/24822/amazing_spider-man_presents_anti-venom_-_new_ways_to_live_2009_2"><img src="mightyheroes.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Avengers(2018 - 2023)</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/2023/infinity_gauntlet_1991"><img src="infinityguantlet.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Infinity Gauntlet(1991)</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/24396/the_amazing_spider-man_2018_-_2022"><img src="spidey.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">The Amazing SpiderMan</p>
+                    </center></td>
+              </tr>
+              <tr>
+                <td><center><a href="https://www.marvel.com/comics/series/19242/star_wars_2015_-_2019"><img src="starwars.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Star Wars(2015 - 2019)</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/20615/ms_marvel_2015_-_2019"><img src="msmarvelseries.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Ms. Marvel(2015 - 2019)</p>
+                    </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/18467/moon_knight_2014_-_2015"><img src="moonknight.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">
+                    Moon Knight(2014 - 2015)</p>
+                     </center></td>
+                <td><center><a href="https://www.marvel.com/comics/series/20897/vision_2015_-_2016"><img src="vision.png" width="200" height="300" id="meme"></a></center><br><center><p id="Text">Vision(2015 - 2016)</p>
+                    </center></td>               
+              </tr>
+
+
+        </table> 
+        <br>
+
+                                                            <!--Marvel insider and Marvel unlimited-->
+       
+        <center><a href="https://www.marvel.com/insider?cid=Dcom_navigation_20200929_insider_footer"><h1 id="marvelfan">GET REWARDS FOR BEING A MARVEL FAN</h1></a></center>
+        <center><a href="https://www.marvel.com/insider?cid=Dcom_navigation_20200929_insider_footer"><img src="marvelinsider.png" height="100px" width="230px" id="marvel_insider"></a></center> 
+        <br>
+        <center><a href="https://www.marvel.com/unlimited?cid=dcom_navigation_20220712_unlimited_footer"><<h1 id="marvelfan">ACCESS OVER 30,000+ DIGITAL COMICS</h1></a></center>
+        <center><a href="https://www.marvel.com/unlimited?cid=dcom_navigation_20220712_unlimited_footer"><img src="marvelunlimited.png" height="100px" width="230px" id="marvel_insider"></a></center>
+
+                                                                    <!--Marvel follow us-->
+
+        <center><<h1 style="color:white;font-family: Agency FB;">FOLLOW US</h1></center> 
+        <center><div class="Dilana">
+            <a href="https://web.facebook.com/Marvel/"><img src="facebook2.png" width="50px" height="50px" id="Hello"></a>
+            <a href="https://www.instagram.com/marvel/"><img src="instagram2.png" width="50px" height="50px" id="Hello"></a>
+            <a href="https://www.youtube.com/marvel"><img src="youtube.png" width="50px" height="50px" id="Hello"></a>
+            <a href="https://twitter.com/marvel"><img src="twitter.png" width="50px" height="50px" id="Hello"></a>
+            <a href="hhttps://www.pinterest.com/marvelofficial/"><img src="pinterest.png" width="50px" height="50px" id="Hello"></a>
+            
+            
+        </div>
+        </center>
+        <br>
+        
+       
+    </body>
+    </html> 

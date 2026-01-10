@@ -1,0 +1,515 @@
+html, body, ul{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+.menu-page{
+  display: flex;
+}
+
+.menu {
+	position: fixed;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	background-color: #000;
+}
+
+.menu-item, .menu-item__link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50%;
+	height: 100%;
+	
+	font-family: sans-serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #ededed;
+	
+	cursor: pointer;
+	text-decoration: none;
+	list-style: none;
+}
+
+.menu-item__link {
+	padding: 20px 0px;
+  transition: width 1s;
+}
+
+.menu-item__link:hover{
+  width: 80%;
+  font-weight: 600;
+	background-color: #ededed;
+	color: black;
+}
+
+.menu-item__info{
+	position: absolute;
+	right: 20px;
+	width: 30px;
+	height: 30px;
+
+ 	border: none;
+ 	border-radius: 5px;
+	background-image: url(https://cdn3.iconfinder.com/data/icons/essential-1/100/Essentials_Icon_Set_V2.1_Expanded_Profile-512.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #ededed; 
+ 	cursor: pointer;
+}
+
+.marvel-about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 40rem;
+}
+
+.marvel-about__img {
+	width: 58%;
+	margin-top: 50px;
+}
+
+.marvel-about__text {
+	width: 55%;
+	margin: 0;
+	margin-bottom: 30px;
+	padding: .8rem;
+
+	font-family: sans-serif;
+	font-size: 15px;
+	text-align: center;
+	
+	border-radius: 0 30px 0 30px;
+	background-color: red;
+	color: #ededed;
+
+	line-height: 1.4rem;
+}
+
+.marvel-about__item {
+	margin-top: 5px;
+	font-family: sans-serif;
+	font-size: 15px;
+	text-align: left;
+	color: #ededed;
+}
+
+.marvel-movies, .marvel-cast {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100%;
+	height: 40rem;
+}
+
+.marvel-cast{
+	height: 135rem;
+}
+
+
+#menuToggle {
+  position: absolute;
+  /*position: sticky;*/
+  top: 45rem;
+  left: 60px;  
+  z-index: 1;
+
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+ 
+#menu {
+  width: 230px;
+  margin: -100px 0 0 -60px;
+  padding: 40px;
+  padding-top: 120px;
+  
+  background: #ededed;
+  list-style-type: none;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: red;
+}
+ 
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+
+.marvel-movies__title {
+	padding: 1.5rem;
+
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+
+	border-radius: 30px 0 30px 0;
+	background-color: red;
+	color: #ededed;
+}
+
+
+.marvel-movies__invite {
+	font-family: sans-serif;
+	font-size: .9rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	color: #ededed;
+}
+
+.marvel-movies__btn-close{
+	width: 40px;
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 0px;
+
+ 	border: none;
+	background-image: url(https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color/254000/39-512.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: transparent; 
+ 	cursor: pointer;
+}
+
+.marvel-movies__wrapper a{
+	position: absolute;
+}
+
+.marvel-movies__btn-close{
+	outline: none;
+}
+
+.marvel-movies__wrapper{
+	display: flex;
+	width: 100%;
+}
+
+.marvel-movies__wrapper-item, .marvel-movies__wrapper-2item, .marvel-movies__wrapper-3item{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #ededed;
+	text-align: center;
+}
+.marvel-movies__wrapper-item img{
+	width: 20%;
+	height: 70%;
+}
+.marvel-movies__wrapper-2item{
+	width: 50%;
+}
+
+.marvel-movies__wrapper-3item{
+	width: 33%;
+}
+
+.marvel-movies__poster{
+	width: 50%;
+	height: 55%;
+}
+
+.marvel-movies__poster-title{
+	margin: 20px 0;
+}
+
+.marvel-movies__poster-text{
+	width: 60%;
+	margin: 0; 
+}
+
+.informations-card{
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	min-height: 300px;
+	
+	border-radius: 25px; 
+	background-color: #ededed;
+}
+
+.marvel-movies__timeline{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.marvel-movies__timeline-item{
+	margin-bottom: 5px;
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	font-weight: 500;
+
+	letter-spacing: 1px;
+	color: #ededed;
+}
+
+.marvel-movies__timeline-item:nth-child(2){
+	border: none;
+	border-top: double 10px red;
+}
+
+
+.informations-card__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	width: 100%;
+	height: 160px;
+}
+
+.informations-card__container:nth-child(1){
+	border: none;
+	border-bottom: dotted 10px #000;
+}
+
+.informations-card__container-item, .informations-card__container-about{
+	font-family: arial;
+	font-size: 1.8rem;
+	font-weight: 600;
+
+	letter-spacing: 1px;
+	color: #000;
+}
+
+.informations-card__container-item-link{
+	margin-top: 3%;
+  font-size: 1.2rem;
+	letter-spacing: 1px;
+	color: #000;
+   
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.informations-card__container-about{
+	width: 90%;
+  margin-bottom: 15px;
+	font-family: sans-serif;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.container-icon{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 100%;
+	height: 20%;
+}
+
+.container-icon__item{
+	width: 30px;
+	height: 30px;
+
+	border: none;
+	cursor: pointer;
+}
+
+.container-icon__item:nth-child(1) {
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+
+	border: none;
+	background-image: url(http://cdn.onlinewebfonts.com/svg/img_336066.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.container-icon__item:nth-child(2) {
+	width: 30px;
+	height: 30px;
+
+	border: none;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.container-icon__item:nth-child(3) {
+	width: 40px;
+	height: 34px;
+
+	border: none;
+	background-image: url(https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.container-icon__item:nth-child(4) {
+	width: 30px;
+	height: 30px;
+	margin-right: 8px;
+
+	border: none;
+	background-image: url(https://vignette.wikia.nocookie.net/phineasferb/images/d/dd/Facebook-icon.png/revision/latest?cb=20110820212238&path-prefix=pt-br);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.container-icon__item:nth-child(5) {
+	width: 30px;
+	height: 30px;
+
+	border: none;
+	background-image: url(https://icon-icons.com/icons2/1294/PNG/512/2362135-instagram-photo-round-social_85523.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+}
+
+.container-icon__item:focus{
+	outline: none;
+}
+
+
+.marvel-cast__gallery-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 97%;
+}
+
+.marvel-cast__gallery-item{
+	display: flex;
+	flex-direction: column;
+	margin: 12px;
+	padding: 10px;
+	
+	font-family: sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+	
+	background-color: white;
+	transform: rotate(-3deg);
+  	z-index: 1;
+}
+
+.marvel-cast__gallery-item__img {
+	height: 170px;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+
+.marvel-cast__gallery-item:hover {
+  transform: scale(1.1,1.1);
+}
+
+.marvel-cast__gallery-title {
+	margin-top: 5%;
+
+	font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #ededed;
+}
+
+

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTER WITH CAUTION</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', monospace;
+            background: #000;
+            color: #00ff9d;
+            min-height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ff9d;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            mix-blend-mode: difference;
+            transition: transform 0.1s;
+            box-shadow: 0 0 20px #00ff9d;
+        }
+
+        .cursor.click {
+            transform: scale(0.8);
+            background: #00ff9d;
+        }
+
+        /* Matrix Rain Background */
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* Main Container */
+        .intro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Terminal Window */
+        .terminal {
+            background: rgba(0, 10, 20, 0.9);
+            border: 2px solid #00ff9d;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            overflow: hidden;
+            box-shadow: 
+                0 0 50px rgba(0, 255, 157, 0.5),
+                inset 0 0 50px rgba(0, 255, 157, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .terminal-header {
+            background: #001122;
+            padding: 1rem;
+            border-bottom: 2px solid #00ff9d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .terminal-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #00ff9d;
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27ca3f; }
+
+        .terminal-body {
+            padding: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        /* Typing Effects */
+        .line {
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .line:nth-child(1) { animation-delay: 0.5s; }
+        .line:nth-child(2) { animation-delay: 1.5s; }
+        .line:nth-child(3) { animation-delay: 2.5s; }
+        .line:nth-child(4) { animation-delay: 3.5s; }
+        .line:nth-child(5) { animation-delay: 4.5s; }
+        .line:nth-child(6) { animation-delay: 5.5s; }
+        .line:nth-child(7) { animation-delay: 6.5s; }
+        .line:nth-child(8) { animation-delay: 7.5s; }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .prompt {
+            color: #00ff9d;
+            font-weight: 700;
+        }
+
+        .command {
+            color: #ffffff;
+        }
+
+        .output {
+            color: #00eeff;
+            margin-left: 2rem;
+        }
+
+        .highlight {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        /* Enter Button */
+        .enter-portal {
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeIn 0.5s 9s forwards;
+        }
+
+        .portal-btn {
+            background: transparent;
+            border: 3px solid #00ff9d;
+            color: #00ff9d;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 10px #00ff9d;
+            border-radius: 10px;
+        }
+
+        .portal-btn:hover {
+            background: rgba(0, 255, 157, 0.1);
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 40px #00ff9d,
+                inset 0 0 40px rgba(0, 255, 157, 0.2);
+            letter-spacing: 5px;
+        }
+
+        .portal-btn:active {
+            transform: scale(0.95);
+        }
+
+        .portal-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 157, 0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .portal-btn:hover::before {
+            left: 100%;
+        }
+
+        .portal-btn i {
+            margin-left: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Glitch Effect */
+        .glitch {
+            position: relative;
+            animation: glitch 5s infinite;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            1% { transform: translate(-2px, 2px); }
+            2% { transform: translate(2px, -2px); }
+            3% { transform: translate(-2px, -2px); }
+            4% { transform: translate(2px, 2px); }
+            5% { transform: translate(0); }
+        }
+
+        /* Loading Bar */
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(0, 255, 157, 0.1);
+            margin: 2rem 0;
+            border-radius: 2px;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 0.5s 8s forwards;
+        }
+
+        .loading-progress {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #00ff9d, #00eeff, #ff00ff);
+            border-radius: 2px;
+            animation: load 3s 8s forwards;
+        }
+
+        @keyframes load {
+            to { width: 100%; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .terminal-body {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+            
+            .portal-btn {
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Skip Intro */
+        .skip-intro {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .skip-intro:hover {
+            opacity: 1;
+        }
+
+        .skip-btn {
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid #00ff9d;
+            color: #00ff9d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix"></canvas>
+    
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Main Content -->
+    <div class="intro-container">
+        <!-- Terminal Window -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-title">SYSTEM_INITIALIZATION</div>
+                <div class="terminal-dots">
+                    <div class="dot red" id="close-btn"></div>
+                    <div class="dot yellow" id="min-btn"></div>
+                    <div class="dot green" id="enter-btn"></div>
+                </div>
+            </div>
+            
+            <div class="terminal-body">
+                <div class="line">
+                    <span class="prompt">root@Abharajith:~$</span>
+                    <span class="command"> ./initialize_system</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Booting Arrow interface...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Loading quantum processors...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Establishing connection to digital consciousness...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Syncing <span class="highlight">CREATIVITY.MODULE</span>...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Activating <span class="highlight">DESIGN.PROTOCOLS</span>...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Deploying <span class="highlight">CODE.ECOSYSTEM</span>...</span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> System Status: <span class="highlight" style="color: #00ff9d;">READY</span></span>
+                </div>
+                
+                <!-- Loading Bar -->
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> Welcome to <span class="glitch">Arrow</span></span>
+                </div>
+                
+                <div class="line">
+                    <span class="output">> A digital ecosystem where code meets creativity</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enter Portal Button -->
+        <div class="enter-portal">
+            <button class="portal-btn" id="enter-portal">
+                ENTER WITH CAUTION
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Skip Intro -->
+    <div class="skip-intro">
+        <button class="skip-btn" id="skip-btn">
+            <i class="fas fa-forward"></i> SKIP INTRO
+        </button>
+    </div>
+
+    <script>
+        // ===== MATRIX RAIN EFFECT =====
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%"\'#&_(),.;:?!\\|{}<>[]^~';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        
+        for(let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00ff9d';
+            ctx.font = `${fontSize}px 'JetBrains Mono'`;
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        // ===== CUSTOM CURSOR =====
+        const customCursor = document.querySelector('.cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            customCursor.style.left = e.clientX + 'px';
+            customCursor.style.top = e.clientY + 'px';
+        });
+        
+        document.addEventListener('mousedown', () => {
+            customCursor.classList.add('click');
+        });
+        
+        document.addEventListener('mouseup', () => {
+            customCursor.classList.remove('click');
+        });
+        
+        // ===== ENTER PORTAL =====
+        const enterBtn = document.getElementById('enter-portal');
+        const skipBtn = document.getElementById('skip-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const minBtn = document.getElementById('min-btn');
+        const greenBtn = document.getElementById('enter-btn');
+        
+        function enterPortfolio() {
+            // Create portal transition effect
+            document.body.style.animation = 'portalTransition 1s forwards';
+            
+            // Add portal transition animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes portalTransition {
+                    0% { opacity: 1; filter: blur(0); }
+                    50% { opacity: 0.5; filter: blur(10px); }
+                    100% { opacity: 0; filter: blur(20px); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Redirect to main portfolio
+            setTimeout(() => {
+                window.location.href = "My-portfolio/Index.html";
+            }, 1000);
+        }
+        
+        // Button events
+        enterBtn.addEventListener('click', enterPortfolio);
+        skipBtn.addEventListener('click', enterPortfolio);
+        greenBtn.addEventListener('click', enterPortfolio);
+        
+        // Terminal button effects
+        closeBtn.addEventListener('click', () => {
+            closeBtn.style.animation = 'pulse 0.5s';
+            setTimeout(() => {
+                closeBtn.style.animation = '';
+            }, 500);
+        });
+        
+        minBtn.addEventListener('click', () => {
+            minBtn.style.animation = 'pulse 0.5s';
+            setTimeout(() => {
+                minBtn.style.animation = '';
+            }, 500);
+        });
+        
+        // Enter key to proceed
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Enter' || e.key === ' ') {
+                enterPortfolio();
+            }
+        });
+        
+        // Auto-enter after 30 seconds
+        setTimeout(enterPortfolio, 30000);
+        
+        // ===== START ANIMATIONS =====
+        function animate() {
+            drawMatrix();
+            requestAnimationFrame(animate);
+        }
+        
+        // Resize handler
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+        
+        // Start everything
+        animate();
+        
+        // Terminal typing effect
+        const lines = document.querySelectorAll('.line');
+        lines.forEach((line, index) => {
+            const text = line.innerHTML;
+            line.innerHTML = '';
+            
+            let i = 0;
+            function typeWriter() {
+                if(i < text.length) {
+                    line.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 30);
+                }
+            }
+            
+            setTimeout(typeWriter, index * 1000 + 500);
+        });
+        
+        console.log('🚀 ARROW LAUNCHER Initialized');
+    </script>
+</body>
+</html>

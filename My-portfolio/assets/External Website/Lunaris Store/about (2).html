@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Lunaris</title>
+
+
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+
+      font-family: 'Inter', sans-serif;
+      background-color: #0b0c17;
+
+      color: #e0e0e0;
+
+      line-height: 1.6;
+    }
+    nav {
+
+      position: sticky;
+      top: 0;
+
+      background: rgba(15, 15, 25, 0.95);
+      backdrop-filter: saturate(180%) blur(20px);
+
+      display: flex;
+
+
+
+
+
+
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+
+
+
+
+
+
+/* check if thuis works later pls */
+
+    }
+    nav .logo {
+      font-family: 'Orbitron', monospace;
+
+
+
+
+
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #ffffff;
+
+
+
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+
+
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+
+      color: #dddddd;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    nav ul li a:hover {
+      color: #ffffff;
+
+
+
+
+
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+
+
+
+
+
+      width: 0;
+      height: 2px;
+      background: #ffffff;
+      left: 0; bottom: -4px;
+
+
+
+
+      transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .about-section {
+      display: flex;
+
+
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+
+
+
+      align-items: center;
+      max-width: 1200px;
+      margin: 4rem auto;
+
+
+
+
+
+      padding: 2rem;
+    }
+    .about-video {
+      flex: 1 1 45%;
+    }
+    .about-video iframe {
+      width: 100%;
+      height: 300px;
+
+
+
+      border: none;
+      border-radius: 12px;
+    }
+    .about-content {
+      flex: 1 1 45%;
+      padding: 1rem;
+
+
+    }
+    .about-content h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    .about-content p {
+      font-size: 1.1rem;
+      color: #bbbbbb;
+
+
+
+
+    }
+
+    .extra-section {
+      max-width: 1000px;
+      margin: 5rem auto 3rem;
+
+
+
+      padding: 2rem;
+      text-align: center;
+
+
+
+    }
+    .extra-section h2 {
+      font-family: 'Orbitron', monospace;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    .extra-section p {
+      font-size: 1.1rem;
+
+
+
+      color: #999;
+    }
+    .extra-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #161926;
+
+
+      padding: 1.5rem;
+      border-radius: 14px;
+
+
+      width: 280px;
+
+      box-shadow: 0 4px 20px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      font-family: 'Orbitron', monospace;
+
+
+
+
+
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
+    }
+    .card p {
+
+
+
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+
+
+
+      .about-section {
+
+
+
+        /* this works but then change if clashes in the futurere and rmemebrer to add the link */
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-video, .about-content {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LUNARIS</div>
+
+
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+
+
+
+      <li><a href="contact.html">Contact</a></li>
+
+
+
+
+
+
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about.html">About</a></li>
+      
+
+
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <div class="about-video">
+      <iframe src="insithvid).mp4" title="About Lunaris" allowfullscreen></iframe>
+    </div>
+    <div class="about-content">
+      <h1>A Deeper Dive Into Us</h1>
+      <p>
+        At Lunaris, we believe in pushing the boundaries of innovation. From our flagship LunarPhone to advanced wearables and accessories,
+        our mission is to fuse futuristic aesthetics with cutting-edge technology. Whether you're a professional, gamer, or creator,
+        Lunaris delivers seamless performance with style.
+      </p>
+    </div>
+  </section>
+  
+
+
+  <section class="extra-section">
+    <h2>Why Choose Lunaris?</h2>
+
+
+    <p>Because we build tomorrow’s tech, today. Here's what makes us different:</p>
+
+    <div class="extra-cards">
+      <div class="card">
+
+        <h3>Innovative Engineering</h3>
+        <p>Every product is engineered with precision, performance, and purpose in mind.</p>
+
+      </div>
+      <div class="card">
+
+        <h3>Eco-Conscious Vision</h3>
+        <p>We design with sustainability at the core—because the future matters.</p>
+      </div>
+      <div class="card">
+        <h3>Elite Support</h3>
+        <p>24/7 global support to guide and assist your every step of the journey.</p>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

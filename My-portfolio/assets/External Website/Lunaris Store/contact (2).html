@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lunaris | Contact</title>
+
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" />
+
+
+
+  <style>
+    
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+
+
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+
+
+
+
+
+
+      background-color: #0c0d14;
+
+
+
+      color: #eaeaea;
+      min-height: 100vh;
+      display: flex;
+
+      flex-direction: column;
+    }
+
+/* le nav :) */
+    nav {
+
+      background-color: #10121c;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+
+
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      position: sticky;
+
+
+
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: saturate(180%) blur(20px);
+
+
+      transition: background-color 0.3s ease;
+    }
+    nav:hover {
+      background-color: #141629;
+    }
+    nav .logo {
+      font-family: 'Orbitron', monospace;
+
+      font-size: 1.8rem;
+
+
+      color: #8da8ff;
+
+
+      letter-spacing: 2px;
+
+
+
+      cursor: default;
+      user-select: none;
+    }
+    nav ul {
+
+
+      list-style: none;
+      display: flex;
+
+
+
+
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #cfd9ff;
+      font-weight: 600;
+
+
+
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover,
+
+    nav ul li a[aria-current="page"] {
+      color: #ffffff;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+
+      width: 0;
+      height: 2px;
+      background: #8da8ff;
+
+
+
+
+
+      left: 0; bottom: 0;
+      transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after,
+
+
+
+
+
+
+    nav ul li a[aria-current="page"]::after {
+
+
+      width: 100%;
+    }
+
+    /* Header area but this is sometimes idk clashing, fix rememeber if you see again*/
+    header {
+      text-align: center;
+
+
+
+      padding: 3rem 2rem 1rem;
+      max-width: 900px;
+
+      margin: 0 auto;
+      font-family: 'Orbitron', monospace;
+      color: #9eb5ff;
+    }
+
+    header p {
+      margin-top: 0.75rem;
+
+
+
+      font-weight: 400;
+      font-size: 1.05rem;
+
+
+
+      color: #b3bddc;
+      max-width: 600px;
+
+
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Main container */
+    main.contact-container {
+
+
+
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+
+      display: flex;
+      gap: 3rem;
+
+
+      padding: 0 2rem;
+      align-items: center;
+
+
+
+
+    }
+
+    /* Profile picture that i added school pic */
+
+
+
+
+
+    .profile-pic img {
+
+
+      width: 260px;
+      height: 260px;
+
+      border-radius: 50%;
+      object-fit: cover;
+
+
+
+
+      box-shadow: 0 0 20px rgba(141, 168, 255, 0.5);
+      border: 3px solid #8da8ff;
+      user-select: none;
+
+
+
+
+
+    }
+
+
+
+
+    /* Contact info and personal detials here ig  */
+    .contact-info {
+      flex: 1;
+
+
+
+
+
+      color: #d4dbff;
+    }
+    .contact-info h2 {
+
+
+      font-family: 'Orbitron', monospace;
+      font-size: 2.5rem;
+
+
+
+      margin-bottom: 1rem;
+      color: #8da8ff;
+    }
+    .contact-info .description {
+      font-size: 1.1rem;
+
+
+
+      line-height: 1.5;
+      margin-bottom: 2rem;
+      color: #aab9ff;
+
+    }
+
+
+
+
+    .contact-details p {
+
+
+
+
+
+
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+      color: #c4c8e0;
+    }
+
+
+    .contact-details strong {
+      color: #d4dbff;
+    }
+
+
+    .contact-details a {
+      color: #8da8ff;
+      text-decoration: none;
+
+
+
+    }
+
+    .contact-details a:hover {
+
+      text-decoration: underline;
+    }
+
+
+
+
+
+
+
+
+    /* Footer section , clear both remeemeber */
+    footer {
+      background: #0d0e15;
+      text-align: center;
+
+
+
+
+      padding: 2rem 1rem;
+      color: #7e8bb8;
+      font-size: 0.9rem;
+
+
+
+
+
+
+    }
+    footer a {
+      color: #9eb5ff;
+      text-decoration: none;
+      margin: 0 1rem;
+
+
+
+      font-weight: 600;
+      transition: color 0.3s ease;
+
+
+
+
+
+    }
+    footer a:hover {
+      color: #ffffff;
+
+
+
+      text-decoration: underline;
+    }
+
+    /* Responsive area here */
+    @media (max-width: 768px) {
+      main.contact-container {
+        flex-direction: column;
+        text-align: center;
+
+
+
+
+      }
+      .profile-pic img {
+        margin: 0 auto 2rem;
+
+
+
+
+
+
+      }
+      .contact-info h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">LUNARIS</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="shop.html">Shop</a></li>
+
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+
+
+      <li><a href="feedback.html">Feedback</a></li>
+       <li><a href="About.html">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact</h1>
+    <p>This website was created for the Wesley College Web Development Competition, completed on 29th July 2025.</p>
+
+  </header>
+
+  <main class="contact-container" role="main" aria-label="Contact information and about the site owner">
+    <section class="profile-pic" aria-label="Profile picture">
+      
+
+
+
+      <img src="IMG-20241112-WA0024.png"Insith Gavrau Liyana Arachchi" />
+
+    </section>
+
+    <section class="contact-info">
+      <h2>Insith Gavrau Liyana Arachchi</h2>
+      <p class="description">
+
+
+
+        I'm a dedicated video editor and creative content producer focused on delivering quality visuals with precision and style.<br />
+        I'm an ongoing learner of web development, currently studying at Royal Institute International School.<br />
+
+
+        <!-- linked in stufff add here if have time -->
+        Feel free to reach out for collaborations or inquiries.
+      </p>
+      <div class="contact-details" aria-label="Contact details">
+        <p><strong>Email:</strong> <a href="mailto:insith.gavrau@gmail.com" target="_blank" rel="noopener noreferrer">insith.gavrau@gmail.com</a></p>
+        <p><strong>Phone:</strong> 0717294551</p>
+
+
+        <p><strong>Location:</strong> Colombo, Sri Lanka</p>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Lunaris Inc. | Follow us:
+
+
+    <a href="#" aria-label="Instagram">Instagram</a>
+
+    <a href="#" aria-label="Twitter">Twitter</a>
+    <a href="#" aria-label="Facebook">Facebook</a>
+    <a href="#" aria-label="YouTube">YouTube</a>
+    
+
+  </footer>
+</body>
+
+</html>
+
+

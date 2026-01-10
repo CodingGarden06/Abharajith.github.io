@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Fan Art Gallery</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fan Art Gallery container */
+        .fan-art-container {
+            background-color: #f0f0f0; /* Light gray background */
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Fan Art Gallery title */
+        .fan-art-title {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Fan art submission button */
+        .submit-button {
+            background-color: #ff9900; /* Bright orange button background */
+            color: #fff; /* White text color */
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Fan art cards container */
+        .fan-art-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Fan art card */
+        .fan-art-card {
+            background-color: #fff; /* White card background */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .fan-art-card:hover {
+            transform: scale(1.05); /* Enlarge card on hover */
+        }
+
+        /* Fan art image */
+        .fan-art-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Fan art caption */
+        .fan-art-caption {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+
+        /* Comic book-inspired fonts */
+        @font-face {
+            font-family: 'Comic Sans MS';
+            src: url('comic-sans.woff') format('woff');
+        }
+    </style>
+</head>
+<body>
+    <div class="fan-art-container">
+        <h1 class="fan-art-title">Marvel Fan Art Gallery</h1>
+
+        <!-- Submission button -->
+        <button class="submit-button">Submit Your Fan Art</button>
+
+        <!-- Fan art cards container -->
+        <div class="fan-art-cards">
+            <!-- Fan art card 1 -->
+            <div class="fan-art-card">
+                <img class="fan-art-image" src="fan-art1.jpg" alt="Fan Art 1">
+                <div class="fan-art-caption">Iron Man by MarvelFan123</div>
+            </div>
+
+            <!-- Fan art card 2 -->
+            <div class="fan-art-card">
+                <img class="fan-art-image" src="fan-art2.jpg" alt="Fan Art 2">
+                <div class="fan-art-caption">Spider-Man by WebSlinger22</div>
+            </div>
+
+            <!-- Add more fan art cards as needed -->
+        </div>
+    </div>
+</body>
+</html>
+
+
+

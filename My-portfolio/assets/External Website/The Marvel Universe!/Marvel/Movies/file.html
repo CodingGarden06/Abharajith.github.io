@@ -1,0 +1,857 @@
+<html>
+    <head><meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marvel Movies</title>
+        <link rel="icon" href="marvel-favicon.ico" type="image/x-icon">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <head>
+            <style>
+                body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg1.jpg');
+    background-color: #161616;
+}
+
+header {
+    background-color: #ed1d24;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+}
+
+.logo {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    max-width: 150px; 
+}
+
+.logo2 {
+    position: absolute;
+    top: -12px; 
+    right: 31px;
+    max-width: 150px; 
+    width: 100px;
+    height: 100px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-top: 3px;
+}
+
+nav {
+    background-color: #333;
+    height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 1px 4px 15px 2px #000000;
+    color: #ed1d24; 
+}
+
+nav a:active {
+    color: #ffcc00; 
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+#search-input {
+    padding: 10px;
+    width: 63%;
+    height: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+#search-button {
+    padding: 7px 14px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0057a3;
+}
+
+
+.btn-box a {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    height: 25px;
+    background: #ffffff00;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    left: 44%;
+    bottom: 7px;
+}
+
+.btn-box a:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #000000;
+}
+.btn-box a:nth-child(2):hover {
+    color: #000000;
+}
+
+
+.btn-box a::before {
+    content: '' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000000 ;
+    z-index: -1;
+    transition: .5s;
+} 
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+            </style>
+        </head>
+    </head>
+    <header>
+        <a href="Marvel.html">
+            <img src="MarvelUniverse.png" alt="Marvel Logo" class="logo"></a>
+            <h1 style="font-family: 'Comic Sans MS', cursive, sans-serif;">Welcome to the Marvel Fan Hub!</h1>
+            <p style="font-family: 'Comic Sans MS', cursive, sans-serif ;">~No man can win every battle, but no man should fall without a struggle.</p>
+            <div class="btn-box">
+                <a href="https://www.marvel.com/signin" target="_blank">Login/Register</a>
+            </div>
+            <img src="AvengersIcon.png" class="logo2">
+    
+        </header>
+        <nav>
+            <ul>
+                <li><a href="https://www.marvel.com/articles" target="_blank">News</a></li>
+                <li><a href="Marvel-Character/Marvel-Characters.html" target="_self">Characters</a></li>
+                <li><a href="Comics/Marvel%20Comics.html" target="_self">Comics</a></li>
+                <li><a href="Movies/file.html">Movies</a></li>
+                <li><a href="Games/marvel%2032.html#">Games</a></li>
+                <li><a href="https://www.marvel.com/culture-lifestyle" target="_blank">More</a></li>
+
+        </ul>
+        <main style="max-width: 400px;
+        height: 40px;
+        margin: 10px auto;
+        padding: 20px;
+        background-color: #ffffff00;
+        border-radius: 35px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        margin-left: 1020px;
+        margin-bottom: 200px;
+        margin-top: -56px;">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search Across The Multiverse...">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="search-results"></div>
+        </main>
+    </nav>
+    
+    <main>
+        <section id="inicio" class="marvel-about">
+            <img src="download (2).png" class="marvel-about__img">
+            <p class="marvel-about__text">
+                The Marvel Cinematic Universe is an American media franchise and shared universe that is centered on a series of superhero films, independently produced by Marvel Studios and based on characters that appear in American comic bookspublished by Marvel Comics. <br/>- Wikipedia
+            </p>
+            <span class="marvel-about__item">Budget:
+                <strong>Total 19 films: US $ 3,807-4,049 billion</strong>
+            </span>
+    
+            <span class="marvel-about__item">Company: 
+                <strong>Marvel Studios</strong>
+            </span>
+    
+            <span class="marvel-about__item">Based on: Characters published by
+                <strong>Marvel Comics</strong>
+            </span>
+        </section>
+    
+        <section id="filmes" class="marvel-movies">
+            <nav>
+              <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+    
+                <ul id="menu">
+                  <a href="#ant-man"><li>Ant-Man</li></a>
+                  <a href="#avengers"><li>Avengers</li></a>
+                  <a href="#black-panther"><li>Black Panther</li></a>
+                  <a href="#captain-america"><li>Captain America</li></a>
+                  <a href="#doctor-strange"><li>Doctor Strange</li></a>
+                  <a href="#guardians"><li>Guardians of the Galaxy</li></a>
+                  <a href="#hulk"><li>Hulk</li></a>
+                  <a href="#iron-man"><li>Iron Man</li></a>
+                  <a href="#spider-man"><li>Spider-Man</li></a>
+                  <a href="#thor"><li>Thor</li></a>
+                </ul>
+              </div>
+            </nav>
+    
+    
+            <h3 class="marvel-movies__title">
+                The MCU, Marvel Cinematic Universe, is composed of <strong>20</strong> movies.
+            </h3>
+        </section>
+    
+    
+        <section id="ant-man" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-2item">
+                    <img class="marvel-movies__poster" 
+                        src="download.jpeg">
+                    <span class="marvel-movies__poster-title">ANT-MAN</span>
+                    <p class="marvel-movies__poster-text">Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, plan and pull off a heist that will save the world.</p>
+                </div>
+    
+                <div class="marvel-movies__timeline">
+                    <span class="marvel-movies__timeline-item">2015</span>
+                    <span class="marvel-movies__timeline-item">2018</span>
+                </div>
+    
+                <div class="marvel-movies__wrapper-2item">
+                    <img class="marvel-movies__poster"
+                        src="1.jpg">
+                    <span class="marvel-movies__poster-title">ANT-MAN AND THE WASP</span>
+                    <p class="marvel-movies__poster-text">As Scott Lang balances being both a Super Hero and a father, Hope van Dyne and Dr. Hank Pym present an urgent new mission that finds the Ant-Man fighting alongside The Wasp to uncover secrets from their past.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="avengers" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2012</span>
+                    </div>
+                    <img class="marvel-movies__poster" 
+                        src="2.jpg">
+                    <span class="marvel-movies__poster-title">AVENGERS</span>
+                    <p class="marvel-movies__poster-text">Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.</p>
+                </div>
+    
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2015</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="3.jpg">
+                    <span class="marvel-movies__poster-title">AVENGERS: AGE OF ULTRON</span>
+                    <p class="marvel-movies__poster-text">When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's mightiest heroes to stop the villainous Ultron from enacting his terrible plan.</p>
+                </div>
+    
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2018</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="4.jpg">
+                    <span class="marvel-movies__poster-title">AVENGERS: INFINITY WAR</span>
+                    <p class="marvel-movies__poster-text">The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="black-panther" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2018</span>
+                    </div>
+                    <img  class="marvel-movies__poster"
+                        src="5.jpg">
+                    <span class="marvel-movies__poster-title">BLACK PANTHER</span>
+                    <p class="marvel-movies__poster-text">Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, plan and pull off a heist that will save the world.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="captain-america" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2011</span>
+                    </div>
+                    <img class="marvel-movies__poster" 
+                        src="6.jpg">
+                    <span class="marvel-movies__poster-title">CAPTAIN AMERICA: FIRST AVENGER</span>
+                    <p class="marvel-movies__poster-text">Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2014</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="7.jpg">
+                    <span class="marvel-movies__poster-title">CAPTAIN AMERICA: WINTER SOLDIER</span>
+                    <p class="marvel-movies__poster-text">As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2016</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="download (1).jpeg">
+                    <span class="marvel-movies__poster-title">CAPTAIN AMERICA: CIVIL WAR</span>
+                    <p class="marvel-movies__poster-text">Political involvement in the Avengers' activities causes a rift between Captain America and Iron Man.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="doctor-strange" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2016</span>
+                    </div>
+                    <img  class="marvel-movies__poster"
+                        src="8.jpg">
+                    <span class="marvel-movies__poster-title">DOCTOR STRANGE</span>
+                    <p class="marvel-movies__poster-text">While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="guardians" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-2item">
+                    <img class="marvel-movies__poster" 
+                        src="9.jpg">
+                    <span class="marvel-movies__poster-title">GUARDIANS OF THE GALAXY</span>
+                    <p class="marvel-movies__poster-text">A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.</p>
+                </div>
+                <div class="marvel-movies__timeline">
+                    <span class="marvel-movies__timeline-item">2014</span>
+                    <span class="marvel-movies__timeline-item">2017</span>
+                </div>
+                <div class="marvel-movies__wrapper-2item">
+                    <img class="marvel-movies__poster"
+                        src="https://cdn.traileraddict.com/content/marvel-studios/guardians-of-the-galaxy-2-poster.jpg">
+                    <span class="marvel-movies__poster-title">GUARDIANS OF THE GALAXY: VOL.2</span>
+                    <p class="marvel-movies__poster-text">The Guardians must fight to keep their newfound family together as they unravel the mystery of Peter Quill's true parentage.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="hulk" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2008</span>
+                    </div>
+                    <img  class="marvel-movies__poster"
+                        src="10.jpg">
+                    <span class="marvel-movies__poster-title">HULK</span>
+                    <p class="marvel-movies__poster-text">Bruce Banner, a scientist on the run from the U.S. Government, must find a cure for the monster he turns into, whenever he loses his temper.</p>
+                </div>
+            </div>
+        </section>
+    
+    
+        <section id="iron-man" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2008</span>
+                    </div>
+                    <img class="marvel-movies__poster" 
+                        src="11.jpg">
+                    <span class="marvel-movies__poster-title">IRON MAN</span>
+                    <p class="marvel-movies__poster-text">After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2010</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="1.jpeg">
+                    <span class="marvel-movies__poster-title">IRON MAN 2</span>
+                    <p class="marvel-movies__poster-text">With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father's legacy.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2013</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="http://i.ebayimg.com/00/s/NTAwWDMzNA==/z/GWgAAOxySoJTVkwP/$_3.JPG?set_id=2">
+                    <span class="marvel-movies__poster-title">IRON MAN 3</span>
+                    <p class="marvel-movies__poster-text">When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="spider-man" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2017</span>
+                    </div>
+                    <img  class="marvel-movies__poster"
+                        src="12.jpg">
+                    <span class="marvel-movies__poster-title">SPIDER-MAN</span>
+                    <p class="marvel-movies__poster-text">Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="thor" class="marvel-movies">
+            <div class="marvel-movies__wrapper">
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2011</span>
+                    </div>
+                    <img class="marvel-movies__poster" 
+                        src="https://vignette.wikia.nocookie.net/marvelmovies/images/7/70/Thor_movie_poster.jpg/revision/latest?cb=20140218055933">
+                    <span class="marvel-movies__poster-title">THOR</span>
+                    <p class="marvel-movies__poster-text">The powerful, but arrogant god Thor, is cast out of Asgard to live amongst humans in Midgard (Earth), where he soon becomes one of their finest defenders.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2013</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="14.jpg">
+                    <span class="marvel-movies__poster-title">THOR: THE DARK WORLD</span>
+                    <p class="marvel-movies__poster-text">When Dr. Jane Foster gets cursed with a powerful entity known as the Aether, Thor is heralded of the cosmic event known as the Convergence and the genocidal Dark Elves.</p>
+                </div>
+                <div class="marvel-movies__wrapper-3item">
+                    <div class="marvel-movies__timeline">
+                        <span class="marvel-movies__timeline-item">2017</span>
+                    </div>
+                    <img class="marvel-movies__poster"
+                        src="15.jpg">
+                    <span class="marvel-movies__poster-title">THOR: RAGNAROK</span>
+                    <p class="marvel-movies__poster-text">Thor is imprisoned on the planet Sakaar, and must race against time to return to Asgard and stop Ragnarök, the destruction of his world, at the hands of the powerful and ruthless villain Hela.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="elenco" class="marvel-cast">
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="16.jpg" />
+                    <span><strong>Robert Downey Jr</strong></span>
+                    <span>Iron Man</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="17.jpg" />
+                    <span><strong>Chris Evans</strong></span>
+                    <span>Captain America</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="18.png" />
+                    <span><strong>Scarlett Johansson</strong></span>
+                    <span>Black Widow</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="19.png" />
+                    <span><strong>Chris Hemsworth</strong></span>
+                    <span>Thor</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="20.png"/>
+                    <span><strong>Mark Rufallo</strong></span>
+                    <span>Hulk</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="21.png" />
+                    <span><strong>Jeremy Renner</strong></span>
+                    <span>Hawkeye</span>
+                </div>
+            </div>
+    
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="22.jpg" />
+                    <span><strong>Tom Hiddleston</strong></span>
+                    <span>Loki</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="23.png" />
+                    <span><strong>Brie Larson</strong></span>
+                    <span>Captain Marvel</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="24.jpg" />
+                    <span><strong>Benedict Cumberbatch</strong></span>
+                    <span>Doctor Strange</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="25.png" />
+                    <span><strong>Chadwick Boseman</strong></span>
+                    <span>Black Panther</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="26.jpg" />
+                    <span><strong>Tom Holland</strong></span>
+                    <span>Spider-Man</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="26.png" />
+                    <span><strong>Tessa Thompson</strong></span>
+                    <span>Valkyrie</span>
+                </div>
+            </div>
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="27.jpg" />
+                    <span><strong>Sebastian Stan</strong></span>
+                    <span>Winter Soldier</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="28.jpg" />
+                    <span><strong>Anthony Mackie</strong></span>
+                    <span>Falcon</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="29.jpg" />
+                    <span><strong>Elizabeth Olsen</strong></span>
+                    <span>Scarlet Witch</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="30.png" />
+                    <span><strong>Paul Bettany</strong></span>
+                    <span>Vision</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/aa6bc4da874e75170829c2751c92ecd7/tumblr_p93oja0S7i1wr1mryo5_400.png" />
+                    <span><strong>Paul Rudd</strong></span>
+                    <span>Ant-Man</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/6cac0170ecf07deb4fbae406c4c7ef83/tumblr_pa6185cUFq1wr1mryo1_400.png" />
+                    <span><strong>Evangeline Lilly</strong></span>
+                    <span>Wasp</span>
+                </div>
+            </div>
+            
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="31.png" />
+                    <span><strong>Zoe Saldana</strong></span>
+                    <span>Gamora</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="32.png" />
+                    <span><strong>Chris Pratt</strong></span>
+                    <span>Star Lord</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="33.jpg" />
+                    <span><strong>Karen Gillan</strong></span>
+                    <span>Nebula</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="34.png" />
+                    <span><strong>Bradley Cooper</strong></span>
+                    <span>Rocket (voice)</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="35.jpg" />
+                    <span><strong>Dave Bautista</strong></span>
+                    <span>Drax</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="36.jpg" />
+                    <span><strong>Pom Klementieff</strong></span>
+                    <span>Mantis</span>
+                </div>
+            </div>
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="37.jpg" />
+                    <span><strong>Cate Blanchett</strong></span>
+                    <span>Hela</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="38.png" />
+                    <span><strong>Idris Elba</strong></span>
+                    <span>Heimdall</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="39.png" />
+                    <span><strong>Josh Brolin</strong></span>
+                    <span>Thanos</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="40.png" />
+                    <span><strong>Don Cheadle</strong></span>
+                    <span>James Rhodes</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="41.png" />
+                    <span><strong>Gwayneth Paltrow</strong></span>
+                    <span>Pepper Potts</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="42.png" />
+                    <span><strong>Michel B Jordan</strong></span>
+                    <span>Erick Killmonger</span>
+                </div>
+            </div>
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="43.png" />
+                    <span><strong>Danai Gurira</strong></span>
+                    <span>Okoye</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="44.jpg" />
+                    <span><strong>Jaimie Alexander</strong></span>
+                    <span>Lady Sif</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="45.png" />
+                    <span><strong>Winston Duke</strong></span>
+                    <span>M'Baku</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="46.jpg" />
+                    <span><strong>Natalie Portman</strong></span>
+                    <span>Jane Foster</span>
+                </div>
+                
+    
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="47.png" />
+                    <span><strong>Daniel Kaluuya</strong></span>
+                    <span>W'Kabi</span>
+                </div>
+            
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="48.png" />
+                    <span><strong>Jeff Goldblum</strong></span>
+                    <span>Grandmester</span>
+                </div>
+                
+            </div>
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="49.jpg" />
+                    <span><strong>Letitia Wright</strong></span>
+                    <span>Shuri</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="50.png" />
+                    <span><strong>Angela Bassett</strong></span>
+                    <span>Ramonda</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="51.jpg" />
+                    <span><strong>Dominic Cooper</strong></span>
+                    <span>Howard Stark - 40's</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="52.png" />
+                    <span><strong>Emily VanCamp</strong></span>
+                    <span>Sharon Carter</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/f81a86fd591f5abcf2f92e9f51e39dbc/tumblr_p2rcaaKmcn1vu933lo9_1280.jpg" />
+                    <span><strong>Hayley Atwell</strong></span>
+                    <span>Peggy Carter</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/ea6e9e773388128556eb60421bea1705/tumblr_p36guuK6sS1tux3bho5_250.png" />
+                    <span><strong>Lupita Nyong'o</strong></span>
+                    <span>Nakia</span>
+                </div>
+            </div>
+            
+    
+            <div class="marvel-cast__gallery-wrapper">
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/502b1a07f913dc206edf537e565a71b1/tumblr_pftrchj9Yr1w3q68eo9_400.jpg" />
+                    <span><strong>Samuel L Jackson</strong></span>
+                    <span>Nick Fury</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/0bbb12ab945014383b0c691681b37485/tumblr_p6fv9andRi1wxhqebo8_400.jpg" />
+                    <span><strong>Cobie Smulders</strong></span>
+                    <span>Maria Hill</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/3ffa75fd74c27f20632e73cab66a127c/tumblr_otjgw7zwhs1rsqnlxo2_250.png" />
+                    <span><strong>Clark Gregg</strong></span>
+                    <span>Agent Coulson</span>
+                </div>
+    
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/b77fb2d97d2f4e65cef18e11209877d8/tumblr_p9rfa5Ucow1xpjiuvo7_250.png" />
+                    <span><strong>Martin Freeman</strong></span>
+                    <span>Everett Ross</span>
+                </div>
+                
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/e64483aac9992653d735d22249fe135a/tumblr_ossrc7Cn4S1w3pp7no6_400.png" />
+                    <span><strong>Zendaya</strong></span>
+                    <span>MJ</span>
+                </div>
+                <div class="marvel-cast__gallery-item">
+                    <img class="marvel-cast__gallery-item__img"
+                        src="https://66.media.tumblr.com/2204af7cfa6aac9ff9d24a7a88aed2e8/tumblr_p847n4jYrp1vu933lo3_1280.jpg" />
+                    <span><strong>Aaron Taylor Johsson</strong></span>
+                    <span>Quiksilver</span>
+                </div>
+            </div>
+            
+            <h1 class="marvel-cast__gallery-title">and so much more characters!</h1>
+        </section>
+    
+        <section id="info" class="marvel-movies">
+            <div class="informations-card">
+                <div class="informations-card__container">
+                    <span class="informations-card__container-item">Marvel</span>
+                    <span class="informations-card__container-item">1 Month Experience/</span>
+                     <a class="informations-card__container-item-link" 
+                        href="marvel.com"
+                        target="_blank">
+                        Marvel.com
+                     </a>
+                </div>
+                <div class="container-icon">
+                    <a class="container-icon__item" 
+                        href="https://codepen.io/camilasoarees/" 
+                        target="_blank">
+                    </a>
+                    <a class="container-icon__item" 
+                        href="https://github.com/camilasoarees"
+                        target="_blank">	
+                    </a>
+                    <a class="container-icon__item" 
+                        href="https://twitter.com/hermensageiro"
+                        target="_blank">
+                    </a>
+                    <a class="container-icon__item" 
+                        href="https://www.instagram.com/camomilavie/"
+                        target="_blank">
+                    </a>
+                    <a class="container-icon__item" 
+                        href="https://www.facebook.com/camila.soares160"
+                        target="_blank">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+</html>

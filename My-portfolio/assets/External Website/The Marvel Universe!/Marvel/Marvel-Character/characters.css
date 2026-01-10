@@ -1,0 +1,745 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22222293;
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
+}
+
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #161616;
+}
+
+header {
+    background-color: #ed1d24;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+}
+
+.logo {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    max-width: 150px; 
+}
+
+.logo2 {
+    position: absolute;
+    top: -12px; 
+    right: 31px;
+    max-width: 150px; 
+    width: 100px;
+    height: 100px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-top: 3px;
+}
+
+nav {
+    background-color: #333;
+    height: 40px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background: transparent;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 1px 4px 15px 2px #000000;
+    color: #ed1d24; 
+}
+
+nav a:active {
+    color: #ffcc00; 
+}
+
+                            main {
+                                max-width: 1200px;
+                                margin: 20px auto;
+                                display: flex;
+                                justify-content: space-around;
+                                flex-wrap: wrap;
+                            }
+                            
+                            .character-card {
+                                width: 300px;
+                                padding: 20px;
+                                margin: 20px;
+                                background-color: #fff;
+                                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                                border-radius: 5px;
+                                transition: transform 0.3s, box-shadow 0.3s;
+                            }
+                            
+                            .character-card:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                                cursor: pointer;
+                            }
+                            
+                            .character-card img {
+                                max-width: 100%;
+                                height: auto;
+                                border-radius: 5px;
+                            }
+                            
+                            .character-card h2 {
+                                font-size: 1.5rem;
+                                margin: 10px 0;
+                            }
+                            
+                            .character-card p {
+                                font-size: 1rem;
+                                color: #666;
+                            }
+                            
+                            .character-card a {
+                                display: inline-block;
+                                margin-top: 10px;
+                                padding: 10px 20px;
+                                background-color: #ff0000;
+                                color: #fff;
+                                text-decoration: none;
+                                border-radius: 5px;
+                                transition: background-color 0.3s;
+                            }
+                            
+                            .character-card a:hover {
+                                background-color: #d60000;
+                            }                   
+                            
+                            .scroll-down {
+                                position: absolute;
+                                bottom: 20px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                font-size: 1.5rem;
+                                cursor: pointer;
+                                animation: bounce 2s infinite;
+                            }
+
+
+
+                                                .content3 {                                                  
+                                                    padding: 10px;
+                                                    display: flex;
+                                                    justify-content: space-between;
+                                                    right: 100px;
+                                                }
+                                    
+                                    
+                                                .character3 {
+                                                    color: #fff;
+                                                    background-image: url('trending-bg.jpg');
+                                                    background-repeat: no-repeat;
+                                                    background-size: cover;
+                                                    background-position: center;
+                                                    background-color: #00000057;
+                                                    border-radius: 10px;
+                                                    border: 1px solid #dddddd00;
+                                                    padding: 20px;
+                                                    margin-bottom: 20px;
+                                                    box-shadow: 1px 2px 10px 4px #ed1d24;
+                                                    position: relative;
+                                                    max-width: 1200px;
+                                                    margin: 20px auto;
+                                                    display: flex;
+                                                    justify-content: space-around;
+                                                    flex-wrap: wrap;
+                                                }
+                                    
+                                                .character3 img {
+                                                    width: max-content;
+                                                    height: auto;
+                                                    border: 1px solid #ddd;
+                                                }
+                                    
+                                                .character3 h3 {
+                                                    font-size: 24px;
+                                                    margin-top: 10px;
+                                                }
+                                    
+                                                .character3 p {
+                                                    margin-top: 0px;
+                                                    flex-wrap: nowrap;
+                                                    
+                                                    font-size: 16px;
+                                                }
+
+                                                .character-featured{
+                                                    width: 300px;
+                                                    padding: 20px;
+                                                    margin: 20px;
+                                                    background-image: url('card.jpg');
+                                                    background-position: center;
+                                                    background-size: cover;
+                                                    background-color: #c7c7c7c4;
+                                                    box-shadow: 0px 0px 20px 4px rgba(255, 26, 26, 0.322);
+                                                    border-radius: 5px;
+                                                    transition: transform 0.3s, box-shadow 0.3s;
+                                                }
+                                                
+                                                .character-featured:hover {
+                                                    transform: translateY(-20px);
+                                                    box-shadow: 0px 10px 20px rgba(42, 141, 255, 0.37);
+                                                    cursor: pointer;
+                                                }
+                                                
+                                                .character-featured img {
+                                                    color: #000000;
+                                                    max-width: 100%;
+                                                    height: auto;
+                                                    border-radius: 5px;
+                                                    box-shadow: 0px 0px 20px 4px rgba(230, 230, 230, 0.568);
+                                                }
+                                                
+                                                .character-featured h2 {
+                                                    color: #d1d1d1;
+                                                    font-size: 1.5rem;
+                                                    margin: 10px 0;
+                                                }
+                                                
+                                                .character-featured p {
+                                                    font-size: 1rem;
+                                                    color: #a8a8a8;
+                                                }
+                                                
+                                                .character-featured a {
+                                                    display: inline-block;
+                                                    margin-top: 10px;
+                                                    padding: 10px 20px;
+                                                    background-color: #ff0000;
+                                                    color: #fff;
+                                                    text-decoration: none;
+                                                    border-radius: 5px;
+                                                    transition: background-color 0.3s;
+                                                }
+                                                
+                                                .character-featured a:hover {
+                                                    background-color: #d60000;
+                                                }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+                    .character4 {
+                        color: #fff;
+                        background-image: url('deadpool-3-bg2.jpg');
+                        background-color: #00000057;
+                        border-radius: 10px;
+                        border: 1px solid #dddddd00;
+                        padding: 10px;
+                        margin-bottom: 100px;
+                        box-shadow: 1px 2px 10px 4px #ed1d24;
+                        position: relative;
+                        max-width: 1200px;
+                        margin: 20px auto;
+                        display: flex;
+                        justify-content: space-around;
+                        
+                    }
+
+                    .character4 img {
+                        width: max-content;
+                        height: auto;
+                        border: 1px solid #ddd;
+                    }
+
+                    .character4 h3 {
+                        font-size: 24px;
+                        margin-top: 10px;
+                    }
+
+                    .character4 p {
+                        margin-top: 0px;
+                        flex-wrap: nowrap;
+                        
+                        font-size: 16px;
+                    }
+                    
+
+                    .character5 {
+                        color: #fff;
+                        background-image: url('Avengers-bg.jpg');
+                        background-color: #00000057;
+                        border-radius: 10px;
+                        border: 1px solid #dddddd00;
+                        padding: 10px;
+                        margin-bottom: 100px;
+                        box-shadow: 1px 2px 10px 4px #1dabed;
+                        position: relative;
+                        max-width: 1200px;
+                        margin: 20px auto;
+                        display: flex;
+                        justify-content: space-around;
+                        
+                    }
+
+                    .character5 img {
+                        width: max-content;
+                        height: auto;
+                        border: 1px solid #ddd;
+                    }
+
+                    .character5 h3 {
+                        font-size: 24px;
+                        margin-top: 10px;
+                    }
+
+                    .character5 p {
+                        margin-top: 0px;
+                        flex-wrap: nowrap;
+                        
+                        font-size: 16px;
+                    }
+
+                    /* Character 6 (LOKI - Season2) */
+
+                    .character6 {
+                        color: #fff;
+                        background-image: url('loki-bg.jpg');
+                        background-size: 170%;
+                        background-color: #00000057;
+                        border-radius: 10px;
+                        border: 1px solid #dddddd00;
+                        padding: 10px;
+                        margin-bottom: 100px;
+                        box-shadow: 1px 2px 10px 4px #69ed1d;
+                        position: relative;
+                        max-width: 1200px;
+                        margin: 20px auto;
+                        display: flex;
+                        justify-content: space-around;
+                        
+                    }
+
+                    .character6 img {
+                        width: max-content;
+                        height: auto;
+                        border: 1px solid #ddd;
+                    }
+
+                    .character6 h3 {
+                        font-size: 24px;
+                        margin-top: 10px;
+                    }
+
+                    .character6 p {
+                        margin-top: 0px;
+                        flex-wrap: nowrap;
+                        
+                        font-size: 16px;
+                    }
+                    
+
+
+                    .character-card2{
+                        margin-bottom: 30px;
+                        width: 470px;
+                        padding: 20px;
+                        margin: 5px;
+                        background-color: #fff;
+                        box-shadow: 0px 0px 20px 4px rgba(27, 27, 27, 0.2);
+                        border-radius: 8px;
+                        transition: transform 0.3s, box-shadow 0.3s;
+                    }
+                    
+                    .character-card2:hover {
+                        transform: translateY(-20px);
+                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                        cursor: pointer;
+                    }
+                    
+                    .character-card2 img {
+                        color: #000000;
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 5px;
+                    }
+                    
+                    .character-card2 h2 {
+                        color: #000000;
+                        font-size: 1.5rem;
+                        margin: 10px 0;
+                    }
+                    
+                    .character-card2 p {
+                        font-size: 1rem;
+                        color: #666;
+                    }
+                    
+                    .character-card2 a {
+                        display: inline-block;
+                        margin-top: 10px;
+                        padding: 10px 20px;
+                        background-color: #ff0000;
+                        color: #fff;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        transition: background-color 0.3s;
+                    }
+                    
+                    .character-card2 a:hover {
+                        background-color: #d60000;
+                    }
+
+.up-coming-movies {
+    top: 100px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: rgba(255, 255, 255, 0.932);
+    border: 2px solid #ddd;
+    box-shadow: 0 4px 20px 2px #fac001;
+    width: 50%;
+    border-radius: 20px;
+}     
+
+                                /* Character Card 3 (Deadpool 3) */
+
+                                .character-card3{
+                                    background-image: url('deadpool-card-bg.jpg');
+                                    margin-bottom: 30px;
+                                    width: 470px;
+                                    padding: 20px;
+                                    margin: 5px;
+                                    background-color: #666666d5;                                  
+                                    border-radius: 8px;
+                                    transition: transform 0.3s, box-shadow 0.3s;
+                                }
+
+                                .character-card3:hover {
+                                    transform: translateY(-20px);
+                                    box-shadow: 0px 10px 20px rgba(255, 13, 13, 0.836);
+                                    cursor: pointer;
+                                }
+
+                                .character-card3 img {
+                                    border: transparent;
+                                    color: #000000;
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 10px;
+                                    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.664);
+                                }
+
+                                .character-card3 h2 {
+                                    color: #000000;
+                                    font-size: 1.5rem;
+                                    margin: 10px 0;
+                                }
+
+                                .character-card3 p {
+                                    font-size: 1rem;
+                                    color: #ffffff;
+                                }
+
+                                .character-card3 a {
+                                    display: inline-block;
+                                    margin-top: 10px;
+                                    margin-right: 20px;
+                                    padding: 10px 20px;
+                                    background-color: #ff0000;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    border-radius: 20px;
+                                    transition: background-color 0.3s;
+                                }
+
+                                .character-card3 a:hover {
+                                    background-color: #d60000;
+                                }
+                                
+
+                                /* Character Card 4 (Avengers-The Kang Disaster) */
+
+                                .character-card4{
+                                    background-image: url('avenger-card-bg.jpg');
+                                    margin-bottom: 30px;
+                                    width: 470px;
+                                    padding: 20px;
+                                    margin: 5px;
+                                    background-color: #666666d5;                                  
+                                    border-radius: 8px;
+                                    transition: transform 0.3s, box-shadow 0.3s;
+                                }
+
+                                .character-card4:hover {
+                                    transform: translateY(-20px);
+                                    box-shadow: 0px 10px 20px #1dabed;
+                                    cursor: pointer;
+                                }
+
+                                .character-card4 img {
+                                    border: transparent;
+                                    color: #000000;
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 10px;
+                                    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.664);
+                                }
+
+                                .character-card4 h2 {
+                                    color: #000000;
+                                    font-size: 1.5rem;
+                                    margin: 10px 0;
+                                }
+
+                                .character-card4 p {
+                                    font-size: 1rem;
+                                    color: #ffffff;
+                                }
+
+                                .character-card4 a {
+                                    display: inline-block;
+                                    margin-top: 10px;
+                                    padding: 10px 20px;
+                                    background-color: #ff0000;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    border-radius: 20px;
+                                    transition: background-color 0.3s;
+                                }
+
+                                .character-card4 a:hover {
+                                    background-color: #580000;
+                                }
+
+
+                                /* Character Card 5 (LOKI-Season2) */
+
+                                .character-card5{
+                                    background-image: url('loki-card-bg.jpg');
+                                    margin-bottom: 30px;
+                                    width: 470px;
+                                    padding: 20px;
+                                    margin: 5px;
+                                    background-color: #666666d5;                                  
+                                    border-radius: 8px;
+                                    transition: transform 0.3s, box-shadow 0.3s;
+                                }
+
+                                .character-card5:hover {
+                                    transform: translateY(-20px);
+                                    box-shadow: 0px 10px 20px #7aed1d;
+                                    cursor: pointer;
+                                }
+
+                                .character-card5 img {
+                                    border: transparent;
+                                    color: #000000;
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 10px;
+                                    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.664);
+                                }
+
+                                .character-card5 h2 {
+                                    color: #000000;
+                                    font-size: 1.5rem;
+                                    margin: 10px 0;
+                                }
+
+                                .character-card5 p {
+                                    font-size: 1rem;
+                                    color: #ffffff;
+                                }
+
+                                .character-card5 a {
+                                    display: inline-block;
+                                    margin-top: 10px;
+                                    padding: 10px 20px;
+                                    background-color: #ff0000;
+                                    color: #fff;
+                                    text-decoration: none;
+                                    border-radius: 20px;
+                                    transition: background-color 0.3s;
+                                }
+
+                                .character-card5 a:hover {
+                                    background-color: #580000;
+                                }
+
+  
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-media-links {
+    font-size: 1cm;
+    padding: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.social-media-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-media-links a:hover {
+    color: #1d9aed;
+}
+
+.social-media-links img {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+
+.social-media-links img:hover {
+    transform: scale(1.1);
+}
+
+.cl-0{
+    text-decoration: none;
+    color: #fff;
+}
+.cl-0:hover{
+    color: red;
+}
+
+.btn-box a {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 29px;
+    background: #ffffff00;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    left: 44%;
+    bottom: 7px;
+}
+
+.btn-box a:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #000000;
+}
+.btn-box a:nth-child(2):hover {
+    color: #000000;
+}
+
+
+.btn-box a::before {
+    content: '' ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000000 ;
+    z-index: -1;
+    transition: .5s;
+} 
+
+.btn-box a:hover::before {
+    width: 100%;
+
+}
+
+.section1 {
+    border-bottom: 4px solid white; 
+    border-radius: 20px;
+}
+
+.section1 {
+    color: #fff; 
+    box-shadow: 0 4px 20px 2px #fff6db;
+}
+
+.bg2 {
+    background-color: rgba(71, 71, 71, 0.384);
+}
